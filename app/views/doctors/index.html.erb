@@ -1,0 +1,18 @@
+<h1>Doctors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number of Patients</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @doctors.each do |dr| %>
+      <tr>
+        <td><%= link_to dr.name, doctor_path(dr) %></td>
+        <td><%= dr.patients.size %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
