@@ -1,0 +1,6 @@
+<% @doctors.each do |d| %>
+<%= d.name %>
+<% end %>
+<% @doctors.each do |d| %>
+<%= d.patients.count %> patients
+<% end  %>
